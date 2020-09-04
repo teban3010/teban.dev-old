@@ -39,3 +39,4 @@ module.exports = withPlugins([optimizedImages], {
     return paths;
   },
 });
+

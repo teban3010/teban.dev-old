@@ -6,12 +6,7 @@ import { ThemeContext } from 'context/ThemeContext';
 const Theme = ({ children }) => {
   const themeContext = useContext(ThemeContext);
 
-  return (
-    <ThemeProvider theme={themeContext.theme}>
-      <CssBaseline />
-      <StylesProvider injectFirst>{children}</StylesProvider>
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={themeContext.theme}>{children}</ThemeProvider>;
 };
 
 export default Theme;

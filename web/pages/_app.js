@@ -11,6 +11,7 @@ import Head from 'next/head';
 import ThemeProvider from 'context/ThemeContext';
 import Theme from 'components/Theme';
 import Layout from 'components/Layout';
+import { CssBaseline, StylesProvider } from '@material-ui/core';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -23,9 +24,12 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <ThemeProvider>
         <Theme>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <CssBaseline />
+          <StylesProvider >
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </StylesProvider>
         </Theme>
       </ThemeProvider>
     </>
